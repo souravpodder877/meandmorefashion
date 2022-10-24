@@ -1,0 +1,13 @@
+<div class="col-12 col-md-3 adCard" *ngFor="let item of parentData; let i=index">
+    <div class="row align-items-center">
+        <div class="col-10 adCardText">
+            <h5><i class="fa fa-snowflake-o" aria-hidden="true"></i> <span>{{item.cardName}}</span></h5>
+            <h3><span>{{item.cardNumber}} 
+            </span>{{item.cardStatus}}</h3>
+            <p>{{item.cardAna}}</p>
+        </div>
+        <div class="col-2 adCardIcon">
+              
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "meandmorefashionstyle",
+    "staging": "meandmorefashionstyle",
+    "stagging": "meandmorefashionshop"
+  },
+  "targets": {},
+  "etags": {}
+}

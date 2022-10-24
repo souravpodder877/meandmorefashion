@@ -1,0 +1,16 @@
+<!-- <app-image-slider [slideDatas]="roundHalfimageData"></app-image-slider> -->
+<div class="row">
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12">
+                <button [routerLink]="['addProduct']" routerLinkActive="router-link-active"  mat-raised-button color="warn">Add Products + </button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 col-md-12">
+                <app-products-list [productListdata]="productsArrays"></app-products-list>
+            </div>
+        </div>
+    </div>
+</div>
+

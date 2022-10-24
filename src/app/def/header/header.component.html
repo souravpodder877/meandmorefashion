@@ -1,0 +1,29 @@
+<div class="header_top">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-8 col-lg-8 headertext">
+                Welcome to Meandmore Fashion ! Wrap new offers / gift every single day on Weekends – New Coupon code: Happy2017
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 headerLog">
+                <ul>
+                    <li *ngFor="let log of headerLogs; let i=index">
+                        <a [routerLink]="[log.link]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >{{log.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header_bottom py-md-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- <div class="col-6 col-md-6 col-lg-1">
+                 <a [routerLink]="['/']" routerLinkActive="router-link-active"> <img [src]="logo" width="100%"> </a> 
+            </div> -->
+            <div class="col-12 col-md-12 col-lg-12">
+                <app-nav></app-nav>
+            </div>
+        </div>
+    </div>
+</div>
+

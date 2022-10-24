@@ -1,0 +1,260 @@
+$font-stack:Helvetica, sans-serif;
+
+
+
+$padd2:2em;
+$apdd1:1em;
+$fontRoboto:'Roboto', sans-serif;
+$fontNunito:'Nunito', sans-serif;
+// font
+$font14:0.9rem;
+$font16:1rem;
+$font18:1.2rem;
+$font20:1.4rem;
+$font24:1.6rem;
+$font30:2rem;
+
+$fontbold:700;
+$fontMedium:500;
+$fontNormal:200;
+
+$white:rgb(255,255,255);
+$black:rgb(0,0,0);
+$red:rgb(168, 0, 0);
+$orange:rgb(239,102,3);
+$orangeDark:rgb(255,60,32);
+$white:#fff;
+$blackgreyDark:rgb(33,34,45);
+$blackgrey:rgb(35,47,62);
+$colorGreyLight:rgb(225,225,225);
+$colorGreyDark: rgb(66,66,66);
+$colorGreyLightextra:rgb(251,251,251);
+$colorGreayBlue:#f4f6fa;
+$colorBlueMed:rgb(20,103,193);
+$colorbluelight:rgb(222,239,247);
+$coloryellowMed:rgb(240,215,0);
+$coloryellowMedopa:rgba(240,215,0,0.9);
+$colorAccent:rgb(254, 77, 136);
+$colorGreen:rgb(29, 164, 41);
+
+
+$borRad10px:5px;
+$borRad20px:20px;
+body{
+  font-size: 1em;
+  
+}
+button{
+  border-radius: 0px;
+}
+
+// transition
+$transEaseLight:all ease 0.3s;
+
+@mixin vCenter {
+  display: flex;
+  align-items: center;
+}
+@mixin hCenter {
+  display: flex;
+  justify-content: center;
+}
+@mixin centerCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@mixin shadow1{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+@mixin buttonRound{
+  background: #ef6603;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+@mixin  paddmargnone {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5{
+  text-transform: capitalize;
+}
+h1{
+  font-size: $font30;
+  font-weight: $fontbold;
+}
+h2{
+  font-size: $font24;
+}
+h3{
+  font-size: $font20;
+}
+
+h5{
+  font-size: $font18;
+  font-weight: 500;
+}
+p{
+  font-weight: $fontNormal;
+  margin: 0;
+  font-size: $font16;
+}
+table thead th{
+  font-weight: 400;
+}
+table tbody td{
+  font-weight: 300;
+}
+@mixin colorbolx {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  // border: 1px solid $colorGreyDark;
+  display: inline-block;
+}
+.red{
+  background-color: #f00600;
+  @include colorbolx();
+}
+.yellow{
+  background-color: #f0d700;
+  @include colorbolx();
+}
+.blue{
+  background-color: #003ef0;
+  @include colorbolx();
+}
+.green{
+  background-color: #52c22f;
+  @include colorbolx();
+}
+.orange{
+  background-color: #f03300;
+  @include colorbolx();
+}
+
+.bor_red{
+  border: 1px solid $red;
+}
+
+
+
+// matinput
+.mat-form-field{
+  display: block;
+}
+
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  .mat-form-field-flex{
+    border: 1px solid $colorGreyLight;
+  }
+}
+
+// common Product Css
+.daily_deal_cont{
+  
+  .daily_deals{
+    display: flex;
+    justify-content: space-between;
+    h3{
+        // border-bottom: 1px solid $colorGreyLight;
+        margin-right: 1.5em;
+        text-transform: uppercase;
+        width: auto;
+        display: inline-block;
+        span{
+            background-color: $blackgreyDark;
+            color: $white;
+            padding:8px 15px;
+            line-height: 30px;
+            display: inline-block;
+        }
+    }
+    
+  }
+  
+  
+}
+
+// topProduct
+
+.trenditem{
+  h3{
+      border-bottom: 1px solid $colorGreyLight;
+      padding-bottom: 0.3em;
+  }
+  ul{
+      margin: 0;
+      padding: 0;
+      margin-top: 0.5em;
+      li{
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          border-bottom: 1px solid $colorGreyLight;
+          padding-bottom: 0.8em;
+          margin-top: 0.8em;
+          .trenImg{
+              width: 40%;
+              display: inline-flex;
+              border: 1px solid $colorGreyLight;
+          }
+          .trenImagText{
+              width: 55%;
+              display: inline-flex;
+              flex-direction: column;
+              font-size: $font14;
+              h5{
+                  font-size: $font16;
+                  margin-bottom: 0;
+              }
+              .trenpriceText{
+                  margin-top: 0.5em;
+                  span{
+                      font-size: 0.9em;
+                      padding: 0.2em 0.5em;
+                      background-color: #3a6e03;
+                      color: #fff;
+                      width: auto;
+                      display: inline-block;
+                      margin-right: 0.5em;
+                  }
+              }
+              .trendsPrice{
+                  color: $colorAccent;
+                  font-weight: 700;
+                  font-size: $font18;
+              }
+          }
+      }
+      li:last-child{
+          border: none;
+      }
+  }
+}
+
+.picImg{
+  img{
+      
+  }
+}
+
+// common product css
+
+

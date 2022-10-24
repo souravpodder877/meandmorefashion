@@ -1,0 +1,37 @@
+@import '../../scss/master.scss';
+.header_top{
+    background: $blackgrey;
+    border-bottom: 1px solid $colorGreyDark;
+    color: $white;
+    font-weight: 100;
+    font-size: 0.8em;
+    padding: 0.3em 0;
+    .headertext{
+        font-size: $font14;
+    }
+    .headerLog{
+        text-align: right;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                display: inline-block;
+                border-right: 1px solid $white;
+                line-height: 12px;
+                a{
+                    font-size: $font14;
+                    color: $white;
+                    padding:0 15px;
+                }
+            }
+            li:nth-last-child(1){
+                border: none;
+            }
+        }
+    }
+}
+.header_bottom{
+    padding: 0.2em 0;
+    background-color: $blackgrey;
+}

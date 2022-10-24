@@ -1,0 +1,15 @@
+@import '../../scss/master.scss'; 
+.adminForm{
+    display:inline-block;
+    padding-right: 1em;
+    .form-label{
+        font-weight: 500;
+    }
+    .form-control{
+        height: 40px;
+        border-radius: 0;
+    }
+    textarea.form-control {
+        min-height: 80px;
+    }
+}

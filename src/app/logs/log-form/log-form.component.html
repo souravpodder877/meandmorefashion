@@ -1,0 +1,20 @@
+<div class="form-floating" *ngFor="let logFormData of logformParentData; let i=index">
+  <input [type]="logFormData.logType" [class]="logFormData.logClass" [id]="logFormData.logId" 
+  [name]="logFormData.logName" [placeholder]="logFormData.LoglevelText" 
+  [(ngModel)]="logFormData.logName"> <label [for]="logFormData.logId">{{logFormData.LoglevelText}} </label>
+</div>
+<!-- <div class="form-floating">
+    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="LogEmailData" 
+    [(ngModel)]="LogEmailData"> <label for="floatingInput">Email </label>
+    
+</div>
+<div class="form-floating">
+    <input type="number" class="form-control" id="floatingPhone" placeholder="Password" name="logPhoneData" 
+    [(ngModel)]="logPhoneData">
+    <label for="floatingPhone">Phone</label>
+</div>
+<div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="logPassData" 
+    [(ngModel)]="logPassData">
+    <label for="floatingPassword">Password</label>
+</div> -->

@@ -1,0 +1,8 @@
+<div class="row mt-3">
+    <div class="offerbanner" *ngFor="let addbanner of addbanners; let i=index">
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active">
+            <img [src]="[addbanner.addbannerName]"  width="100%">
+        </a>
+    </div>
+</div>
+

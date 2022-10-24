@@ -1,0 +1,42 @@
+<div class="row mt-4">
+    <div class="col-12 daily_deals">
+        <h3><span>Daily Deals</span></h3>
+    </div>
+    <div class="col-12 mt-3">
+        <div class="row">
+            <!-- routint with id -->
+            <div class="col-12 col-md-4 daily_deal_product" *ngFor="let topOffer of topOffers; let i=index">
+                <!-- <a [routerLink]="['/topofferDetails', topOffer.id]" routerLinkActive="router-link-active" >  -->
+                <div (click)="topOfferDetails(topOffer.id)" class="daily_prod_img">
+                    <img [src]="[topOffer.dailyimage]" width="100%">
+                    <div class="daily_off">
+                        35%
+                    </div>
+                </div>
+                <div [class.daily_prod_cont]="true">
+                    <div class="daily_text">
+                        <h5>{{topOffer.dailyimgName}}</h5>
+                        <div class="colorbox">
+                            Color 
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="blue"></span>
+                            <span class="green"></span>
+                            <span class="orange"></span>
+                        </div>
+                        <div class="sizebox mt-2">
+                            Size 
+                            <span>M</span>
+                            <span>L</span>
+                            <span>XL</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- </a> -->
+            </div>
+            <!-- routint with id -->
+        </div>
+        
+    </div>
+</div>
+

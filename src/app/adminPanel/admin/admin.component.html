@@ -1,0 +1,18 @@
+<div class="adminPanel">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 adminleftcont">
+            <div class="adminList">
+              <ul>
+                <li *ngFor="let item of adminMenus">
+                    <a [routerLink]="[item.routerPathValue]" routerLinkActive="router-link-active" >{{item.contentText}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-10">
+              <router-outlet></router-outlet>
+          </div>
+        </div>
+    </div>
+</div>

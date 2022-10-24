@@ -1,0 +1,63 @@
+@import '../../scss/master.scss';
+.offer_cont{
+    // margin-top:1.4em;
+    display: flex;
+    .offer_cont_left{
+        background-color: $orangeDark;
+        position: relative;
+        width: 30%;
+        height: 50px;
+        padding-left: 2em;
+        color: $white;
+        display: flex;
+        align-items: center;
+        .fa{
+            padding-right: 0.3em;
+            font-size: $font30;
+        }
+    }
+    .offer_cont_left:after{
+        content: "";
+        position: absolute;
+        right: -50px;
+        width: 0;
+        height: 0;
+        border-bottom: 50px solid $orangeDark;
+        border-right: 50px solid transparent;
+    }
+    .offer_cont_right{
+        display: flex;
+        align-items: center;
+        background-color: $colorGreyLight;
+        width: 70%;
+        padding-left: 3em;
+        span{
+            color:$orange;
+            font-weight:700;
+            font-size: $font18;
+            padding-left: 0.2em;
+            text-shadow: 2px 1px 3px $white;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .offer_cont{
+        
+        .offer_cont_left{
+            height: auto;
+            padding-left: 0.8em;
+            line-height: 20px;
+        }
+        .offer_cont_right{
+            display: block;
+            padding-left: 1em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            line-height: 20px;
+        }
+    }
+    .offer_cont_left:after{
+        display: none;
+    }
+  }

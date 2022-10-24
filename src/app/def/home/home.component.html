@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-3 col-lg-2">
+            <app-leftpanel></app-leftpanel>
+        </div>
+        <div class="col-12 col-md-5 col-lg-7 banner_cont">
+            <div class="row">
+                <div class="col-12 col-md-4 spec_offe" *ngFor="let paymentSecure of paymentSecures; let i=index">
+                    {{paymentSecure.name}}
+                </div>
+                <div class="col-12 p-0">
+                    <app-image-slider [slideDatas]="ngSlidesHome"></app-image-slider>
+                </div>
+                <div class="col-12 p-0">
+                    <app-giftspecial></app-giftspecial>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3">
+            <app-rightadpanel></app-rightadpanel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-2 d-none d-md-block">
+            <app-specialoffer></app-specialoffer>
+            <app-trend-item-left></app-trend-item-left>
+            <app-top-rated-producs></app-top-rated-producs>
+            <app-topdis-products></app-topdis-products>
+            <app-daily-deals></app-daily-deals>
+        </div>
+        <div class="col-12 col-md-10">
+            <!-- daily-deals -->
+            <app-topoffer></app-topoffer>
+            <!-- <app-offer-banner></app-offer-banner> -->
+            <app-trend-items></app-trend-items>
+            <app-tshirt-arrival></app-tshirt-arrival>
+            <app-new-products-arrival></app-new-products-arrival>
+            <app-newitems></app-newitems>
+            <app-recent-serch></app-recent-serch>
+            <app-suggestion></app-suggestion>
+            <app-top-brands></app-top-brands>
+        </div>
+    </div>
+</div>
+
+
+
+

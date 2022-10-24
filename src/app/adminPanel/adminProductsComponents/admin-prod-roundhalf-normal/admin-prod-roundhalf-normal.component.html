@@ -1,0 +1,56 @@
+
+<div class="row">
+    <div class="container-fluid">
+        <div class="row mt-4 mb-3">
+            <div class="col-12">
+                <button [routerLink]="['addProduct']" routerLinkActive="router-link-active"  mat-raised-button color="warn">Add Products + </button>
+            </div>
+        </div>
+        
+        <!-- <app-products-list [productListdata]="rhProductArray"></app-products-list> -->
+        <h3>RoundHalf</h3>
+        <div class="row prod_table mt-2">
+            <div class="col-12">
+                <table class="table table-dark table-striped table-bordered table-hover table-responsive fw-light">
+                    <thead class="fw-normal">
+                      <tr>
+                        <th scope="col">Sl No</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Distributer</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">OfferPrice</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of rhProductArray; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.prodId}}</td>
+                        <td>{{item.prodName}}</td>
+                        <td>{{item.prodCateg}}</td>
+                        <td>{{item.prodSize}}</td>
+                        <td>{{item.prodCo}}</td>
+                        <td>{{item.prodColor}}</td>
+                        <td>{{item.prodPrice}}</td>
+                        <td>{{item.prodDis}}</td>
+                        <td>{{item.prodPrice - (item.prodPrice*item.prodDis/100) | number: '1.0-0'}}</td>
+                        <td><img src="../../../assets/images/round-normal/rock-this6.jpg" [src]="item.formFile" width="100%" alt="image"></td>
+                        <td class="d-flex align-items-center">
+                          <span class="me-1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                          <span (click)="deleteProd(item.prodId)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

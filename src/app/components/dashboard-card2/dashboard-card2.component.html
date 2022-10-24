@@ -1,0 +1,21 @@
+<div [class]="item.cssClass" *ngFor="let item of parentDatas; let i=index">
+    <div class="dash_card">
+        <div class="row justify-content-between">
+            <div class="col-9 col-md-9 cust_text">
+                {{item.custText}}
+            </div>
+            <div class="col-3 col-md-3">
+                <mat-icon color="accent">{{item.matIcon}}</mat-icon>
+            </div>
+        </div>
+        <div class="cust_heading">
+            {{item.custNumber}}
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 sale_index">
+                <mat-icon>{{item.arrow}}</mat-icon> {{item.figurePercentage}}%
+                <span>{{item.timeData}}</span>
+            </div>
+        </div>
+    </div>
+</div>

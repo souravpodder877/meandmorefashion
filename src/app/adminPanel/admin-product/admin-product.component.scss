@@ -1,0 +1,30 @@
+@import '../../scss/master.scss';  
+.admiRight{
+    .dashCards{
+
+    }
+    .prod_cate{
+        h3{
+            padding-bottom: 0.3em;
+        }
+    }
+    .adminForm{
+        .form-label{
+            font-weight: 500;
+        }
+        .form-control{
+            height: 40px;
+            border-radius: 0;
+        }
+        textarea.form-control {
+            min-height: 80px;
+        }
+    }
+    .prod_table{
+        table{
+            th{
+                font-weight: 500;
+            }
+        }
+    }
+}

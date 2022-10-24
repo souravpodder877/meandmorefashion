@@ -1,0 +1,13 @@
+<!-- cont -->
+<div [class]="item.parentClass" *ngFor="let item of logInputParentDatas">
+    <div [class]="item.mainDivClass">
+        <label [for]="item.inputId" [class]="item.labelClass">{{item.Labeltext}}</label>
+        <input [type]="item.inputType" [class]="item.inputClass" [id]="item.inputId" [name]="item.inputName" 
+        [(ngModel)]="item.inputName" [placeholder]="item.inputPlaceholderText">
+    </div>
+</div>
+<!-- cont -->
+
+       
+       
+    

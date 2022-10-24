@@ -1,0 +1,8 @@
+<div class="row my-4">
+    <ng-container *ngFor="let item of parentButtonDatas; let i=index">
+        <div class="col-12 col-md-2">
+            <button mat-raised-button [color]="item.btnColor">{{item.btnTxt}}</button>
+        </div>
+    </ng-container>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="recipe ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-2 recipe_left">
+                <app-recipe-left [parentData]="recipeNavs"></app-recipe-left>
+            </div>
+            <ng-container *ngIf="!recipeRouter; else elseTemplate">
+                <div class="col-12 col-md-10 recipe_right_cont">
+                    <router-outlet></router-outlet>
+                </div>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <div class="col-12 col-md-10 recipe_right_cont">
+                    <app-recipe-right></app-recipe-right>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

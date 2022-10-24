@@ -1,0 +1,27 @@
+@import '../../scss/master.scss';
+.admindashboard{
+    h3{
+        font-size: $font24;
+    }
+    .mat_cal{
+        position: relative;
+        .mat_cal_input{
+            // height: 40px;
+            // background-color: $white;
+        }
+        .mat_cal_admin{
+            height: 58px;
+            background-color: $orangeDark;
+            position: absolute;
+            right: 12px;
+            top: 0;
+            color: $white;
+        }
+    }
+    .chart_cont{
+        background-color: $white;
+        border: 1px solid $colorGreyLightextra;
+        min-height: 300px;
+        @include shadow1;
+    }
+}

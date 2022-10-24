@@ -1,0 +1,38 @@
+@import '../../scss/master.scss';
+
+
+.dash_card{
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    background-color: $white;
+    padding: 1em;
+    font-weight: 300;
+    margin-bottom:1em;
+    border:1px solid $colorGreyLightextra;
+    border-radius: 5px;
+    // border-right: 2px solid $colorBlueMed;
+    @include shadow1;
+    .cust_text{
+        font-size: $font16;
+        color: $colorGreyDark;
+        font-weight: 500;
+    }
+    .cust_heading{
+        font-size: $font24;
+        color: $colorAccent;
+        line-height: 25px;
+    }
+    .sale_index{
+        color: $colorGreen;
+        font-size: $font14;
+        display: flex;
+        align-items: center;
+        span{
+            color: $colorGreyLight;
+            padding-left: 0.5em;
+        }
+    }
+    
+
+}

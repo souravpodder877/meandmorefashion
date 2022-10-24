@@ -1,0 +1,59 @@
+<div class="login">
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4 p-0 log_left">
+              <img [src]="[logImage]" width="100%">
+              <div class="sosial_login_cont">
+                  <h3>
+                    Go with Sosial
+                  </h3>
+                  <p>Get Started with Sosial Accounts</p>
+                  <p><mat-icon>person_add</mat-icon> <mat-icon>facebook</mat-icon></p>
+              </div>
+          </div>
+          <div class="col-12 col-md-4 log_right">
+              <div class="row align-items-center h-100">
+                <main class="formSignin col-12">
+                  <form >
+                    <!-- <img class="mb-4" [src]="logo" alt="image" width="150px"> -->
+                    <h3 class="h3 mb-3 fw-normal">{{LogFormText}}</h3>
+                    <!-- <app-log-form [logformParentData] ="logFormData"></app-log-form> -->
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control" id="floatingPhone" placeholder="Phone" name="logPhoneData" 
+                      [(ngModel)]="logPhoneData">
+                      <label for="floatingPhone">Tel</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingCompany" placeholder="Phone" name="logCompData" 
+                      [(ngModel)]="logCompData">
+                      <label for="floatingPhone">Company</label>
+                    </div>
+                    
+                    <div class="checkbox mb-3">
+                      <label>
+                        <input type="checkbox" value="remember-me"> {{productName}}
+                      </label>
+                    </div>
+                    <button class="w-100" mat-raised-button color="primary" (click)="logDataPushServerMethod()">Email</button>
+                    <button class="w-100 mt-2" mat-raised-button color="accent" (click)="logFormSub()">Login With Phone</button>
+                    <div class="checkbox my-3">
+                      <p>
+                          <a [routerLink]="['/forgetPassword']" routerLinkActive="router-link-active" >Forget Password</a> 
+                          or 
+                          <a [routerLink]="['/register']" routerLinkActive="router-link-active"><b>Register</b></a>
+                      </p>
+                    </div>  
+                  </form>
+                </main>
+              </div>
+          </div>
+            <!-- <div class="col-12 col-md-4">
+              <ul>
+                <li *ngFor="let LoginMail of LoginMails; let i=index">
+                  {{LoginMail.name}} '+' {{LoginMail.age}}
+                </li>
+              </ul>
+            </div> -->
+        </div>
+    </div>
+</div>

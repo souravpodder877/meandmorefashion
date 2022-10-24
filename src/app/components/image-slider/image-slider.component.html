@@ -1,0 +1,12 @@
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let slideData of slideDatas; let i=index">
+      <div class="picsum-img-wrapper">
+        <img [src]='slideData.slideImage' width="100%">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{slideData.bannerHeadtext}}</h3>
+        <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+      </div>
+    </ng-template>
+</ngb-carousel>
+

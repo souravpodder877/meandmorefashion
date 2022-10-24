@@ -1,0 +1,39 @@
+<div class="login">
+  <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4 p-0 log_left">
+            <img [src]="[logImage]" class="log_img" width="100%">
+            <div class="sosial_login_cont">
+              <h3>
+                Go with Sosial
+              </h3>
+              <p>Get Started with Sosial Accounts</p>
+              <p><mat-icon>person_add</mat-icon> <mat-icon>facebook</mat-icon></p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 log_right">
+            <div class="row align-items-center h-100">
+              <main class="formSignin col-12">
+                <form #registrationForm >
+                  <h5 class="h3 mb-3 fw-normal">{{LogFormText}}</h5>
+                  <div class="mb-3">
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number">
+                  </div>
+                  <!-- <app-log-form [logformParentData] ="registerFormData"></app-log-form> -->
+                  <button class="w-100" mat-raised-button color="primary">Submit</button>
+                  <div class="checkbox my-3">
+                    <p>
+                      <a [routerLink]="['/forgetPassword']" routerLinkActive="router-link-active" >Next Level</a> 
+                        or 
+                      <a [routerLink]="['/login']" routerLinkActive="router-link-active"><b>Login</b></a>
+                    </p>
+                  </div>  
+                </form>
+            </main>
+            </div>
+            
+        </div>
+          
+      </div>
+  </div>
+</div>

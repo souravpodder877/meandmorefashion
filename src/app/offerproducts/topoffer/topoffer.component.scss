@@ -1,0 +1,91 @@
+@import '../../scss/master.scss';
+.daily_deals{
+    h3{
+        border-bottom: 1px solid $colorGreyLight;
+        margin-right: 1.5em;
+        text-transform: uppercase;
+        span{
+            background-color: $blackgreyDark;
+            color: $white;
+            padding:8px 15px;
+            line-height: 30px;
+            display: inline-block;
+        }
+    }
+}
+.daily_deal_product{
+    position: relative;
+    .daily_prod_img{
+        width: 70%;
+        display: inline-block;
+        position: relative;
+        .daily_off{
+            background-color: $orangeDark;
+            height: 65px;
+            width: 80px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: $font24;
+            font-weight: 700;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .daily_prod_cont{
+        background: rgba(235,235,235,0.9);
+        // opacity: 0.5;
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%);
+        padding: 1em;
+        // transform: translateX(-30%);
+        // transform: translate(-60%, -30%);
+        .daily_text{
+            border: 1px solid $colorGreyLight;
+            height: 100%;
+            padding: 0.7em;
+            h5{
+                font-size: $font18;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .colorbox{
+                font-size: $font16;
+                display: flex;
+                align-items: center;
+            }
+            .sizebox{
+                font-size: $font16;
+                display: flex;
+                align-items: center;
+                span{
+                    margin-left: 10px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .daily_deal_product{
+        .daily_prod_img{
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        .daily_prod_cont{
+            bottom: 16px;
+            top: auto;
+            right: 11px;
+            left: auto;
+            transform: translateY(0%);
+        }
+    }
+
+}

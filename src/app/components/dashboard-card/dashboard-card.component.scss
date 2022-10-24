@@ -1,0 +1,76 @@
+@import '../../scss/master.scss';
+.adCard{
+    background-color: $white;
+    border-left: 5px solid $colorAccent;
+    margin:1em 3% 2em 0;
+    width: 22%;
+    display: inline-block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include shadow();
+    .adCardText{
+        // padding:1em 1em;
+        padding-left: 2em;
+        h3{
+            font-size: $font16;
+            color: $black;
+            padding:0.5em 0;
+            margin: 0;
+            color: $colorAccent;
+            font-weight: 500;
+            text-transform: uppercase;
+            span{
+                background-color: $colorBlueMed;
+                padding: 0.4em;
+                color: $white;
+                text-align: center;
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+        }
+        h5{
+            padding: 0;
+            margin: 0;
+            font-size: $font14;
+            font-weight: 500;
+            color: $colorBlueMed;
+            span{
+                padding-left: 0.3em;
+            }
+        }
+        p{
+            color: $colorGreyDark;
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+            font-weight: 300;
+            // padding-top: 0.5em;
+        }
+    }
+    .adCardIcon{
+        background-color: $colorBlueMed;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa{
+            color: $white;
+            font-size: $font30;
+        }
+    }
+}
+.addCard:nth-child(even){
+    border-left: 5px solid $colorBlueMed;
+    .adCardIcon{
+        .fa{
+            color: $colorAccent;
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .adCard{
+        width: 96%;
+        margin:1em 3% 1em 0;
+    }
+}

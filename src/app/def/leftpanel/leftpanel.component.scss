@@ -1,0 +1,16 @@
+@import '../../scss/leftpanel.scss';
+.left_panel{
+    .leftpanel_heading{
+
+    }
+    .leftpanelbody{
+        ul{
+            li{
+                list-style: none;
+            }
+            li:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="row left_panel">
+    <div class="col-12 leftpanel_heading">
+        <h3><i class="fa fa-bars" aria-hidden="true"></i> All Categories</h3>
+    </div>
+    <div class="col-12 leftpanelbody">
+        <ul>
+            <li *ngFor="let recipeNav of parentData; let i=index">
+                <a [routerLink]="[recipeNav.leftnavlink]" routerLinkActive="router-link-active" >{{recipeNav.Leftnavname}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

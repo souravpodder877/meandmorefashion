@@ -1,0 +1,10 @@
+<div [class]="item.parentClass" *ngFor="let item of logSelectParentDatas">
+    <div [class]="item.mainDivClass">
+        <label [for]="item.inputId" [class]="item.labelClass">{{item.Labeltext}}</label>
+        <select [class]="item.inputClass" aria-label="Default select example" name="prodCateg">
+            <ng-container *ngFor="let item of item.selectOptiondatas">
+                <option [value]="item.value">{{item.valueText}}</option>
+            </ng-container>
+        </select>
+    </div>
+</div>

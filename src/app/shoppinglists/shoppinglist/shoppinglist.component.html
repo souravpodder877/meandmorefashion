@@ -1,0 +1,48 @@
+<div class="recipe_list">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-md-3" *ngFor="let addRecipeArray of addRecipeArrays; let i=index">
+                <img [src]="[addRecipeArray.image]" width="100%" alt="" class="mb-3">
+                <h3>{{addRecipeArray.name}}</h3>
+                <h6>{{addRecipeArray.ingred}}</h6>
+                <p class="mt-1">{{addRecipeArray.text}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- push form -->
+    <div class="col-12 col-md-6 mt-4">
+        <h3>Add Reciepe</h3>
+        <form action="">
+            <div class="col-12">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Recipe Name"
+                    name="serverName" [(ngModel)]="addRecipeName">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Recipe Ingrediance"
+                    name="serverName" [(ngModel)]="addRecipeIngredience">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Making Process" rows="3"
+                    name="recipeProcess"  [(ngModel)]="addRecipeProcess">
+                    </textarea>
+                </div>
+                
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger" (click)="addRecipe()">Add</button>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-success" (click)="deleteRecipe()">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </form>    
+    </div>
+    <!-- push form -->
+</div>
+    
+
+
+

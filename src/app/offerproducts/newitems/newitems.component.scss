@@ -1,0 +1,18 @@
+@import '../../scss/master.scss';
+.new_items{
+    margin-top: 1.6em;
+    .new_items_largeImage{
+        display: none;
+    }
+    .new_items_smallImg{
+        margin-bottom: 1.7em;
+    }
+}
+.isDisplay{
+    display: block;
+    transition: all 0.3s ease;
+}
+.isDisplayNone{
+    display: none;
+    transition: all 0.3s ease;
+}

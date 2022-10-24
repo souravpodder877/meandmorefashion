@@ -1,0 +1,46 @@
+
+    <div class="row trendItemContent">
+        <!-- cont -->
+          <div class="col-12 col-md-3" *ngFor="let item of parentData; let i=index">
+              <div class="card">
+                  <div class="card_img">
+                      <img [src]="item.prodimgUrl" width="100%" height="">
+                  </div>
+                  <div class="card_cont">
+                      <div class="card_heading">
+                        <h3>
+                          {{item.prodimgName}}
+                        </h3>
+                      </div>
+                      <div class="card_price_cont">
+                          <div class="card_price">
+                            <!-- <i class="fa fa-inr" aria-hidden="true"></i> -->
+                            {{item.prodCategory}}
+                          </div>
+                          <div class="card_star">
+                            {{item.prodimgRating}} <i class="fa fa-star" aria-hidden="true"></i> 
+                          </div>
+                          <div class="card_star_text">
+                            {{item.prodimgRatingPerson}} Ratings
+                          </div>
+                      </div>
+                      <div class="cart mt-2">
+                        <p>
+                          Stock: <span>750 Box</span>
+                        </p>
+                        <button [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button 
+                        color="primary" class="mr-3">{{item.qntyText}}</button>
+
+                        <!-- <button mat-raised-button color="accent" class="mr-3">Buy Now</button>
+                        <a [routerLink]="item.link" routerLinkActive="router-link-active" > {{item.qntyText}}</a>
+                        <button   
+                          mat-raised-button color="primary" class="mr-3">
+                        </button> -->
+                      </div>
+                  </div>
+                  <!-- <div class="daily_off">{{item.prodimgDiscount}}%</div> -->
+              </div>
+          </div>
+        <!-- cont -->
+      </div>
+  

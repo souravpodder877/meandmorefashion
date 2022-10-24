@@ -1,0 +1,30 @@
+@import '../../scss/master.scss';
+.footer{
+    background: $black;
+    // margin-top: 4em;
+    .foot_cont{
+        text-align: center;
+        h1{
+            color: $white;
+            @include paddmargnone;
+            
+        }
+        p{
+            color: $white;
+        }
+    }
+    .foot_icon{
+        .face_icon{
+            background: $orange;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            @include centerCenter;
+            margin:5px;
+            a{
+                color: $white;
+            }
+        }
+
+    }
+}

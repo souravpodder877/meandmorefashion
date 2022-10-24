@@ -1,0 +1,22 @@
+@import '../../scss/master.scss';
+.recipe_right{
+    .recipe_img_cont{
+        .recipeImage{
+            display: block;
+            img{
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+        h3{
+            padding: 0;
+            padding-top: 0.5em;
+        }
+        p{
+            padding: 0;
+            
+        }
+    }
+}

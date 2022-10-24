@@ -1,0 +1,12 @@
+<div class="recipe_right mt-3">
+    <div class="row">
+        <div class="col-12 col-md-3 recipe_img_cont" *ngFor="let recipe of recipeDishes; let i=index">
+            <div class="recipeImage">
+                <img [src]="recipe.imgUrl" alt='{{recipe.name}}'>
+            </div>
+            <h3>{{recipe.name}}</h3>
+            <p>{{recipe.description}}</p>
+        </div>
+        
+    </div>
+</div>

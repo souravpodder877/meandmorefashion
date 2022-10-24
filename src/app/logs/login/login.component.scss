@@ -1,0 +1,56 @@
+@import '../../scss/master.scss';
+.login{
+    background-color: $colorBlueMed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .log_left{
+        position: relative;
+        .log_img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .sosial_login_cont{
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: rgba(255, 253, 253, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            h3{
+                font-size: $font30;
+                color: $white;
+            }
+            p{
+                color: $white;
+                font-size: $font18;
+            }
+            p:last-child{
+                padding-top: 0.5em;
+                .mat-icon{
+                    font-size: 40px;
+                    display: inline-block;
+                    height: auto;
+                    padding-right: 10px;
+                    width: auto;
+                }
+            }
+        }
+    }
+    .log_right{
+        background-color: $white;
+        padding:2em;
+        
+    }
+    button{
+        height: 40px;
+    }
+}

@@ -1,0 +1,94 @@
+@import '../../scss/master.scss';
+.trendItemContent{
+    position: relative;
+    .card{
+        background-color: $colorGreyLightextra;
+        @include shadow;
+        .card_img{
+            img{
+                height: 300px;
+                object-fit: cover
+            }
+        }
+        .card_cont{
+            .card_heading{
+              width: 87%;
+              position: absolute;
+              z-index: 5;
+              padding: 1.5em 1.5em;
+              color: $white;
+              margin-top: -45px;
+              background: $orangeDark;
+              h3{
+                text-align: center;
+                color: $white;
+                font-size: $font16;
+                line-height: 0;
+                padding: 0;
+                margin: 0px;
+              }
+            }
+            position: relative;
+            padding: 1.2em;
+            text-align: center;
+            border: 1px solid $colorGreyLight;
+            
+            .card_price_cont{
+                width: 100%;
+                display: flex;
+                margin-top: 1em;
+                flex-wrap: wrap;
+                align-items: center;
+                
+                .card_price{
+                    width: 38%;
+                    font-size: $font18;
+                    color: $colorAccent;
+                    font-weight: 500;
+                    text-align: left;
+                    line-height: 22px;
+                    span{
+                      font-size: $font14;
+                      text-decoration: line-through;
+                      color: $colorBlueMed;
+                      font-weight: 400;
+                    }
+                }
+                .card_star{
+                  font-size: $font14;
+                  padding: 0.2em 0.5em;
+                  background-color: #3a6e03;
+                  color: $white;
+                  width: auto;
+                  display: inline-block;
+                  margin-right: 0.5em;
+                }
+                .card_star_text{
+                  font-size: $font14;
+              }
+            }
+        }
+        .cart{
+          display: flex;
+          justify-content: flex-start;
+            button{
+                border-radius: 0;
+                margin-right: 0.5em;
+            }
+        }
+    }
+    .daily_off {
+        background-color: #ff3c20;
+        height: 65px;
+        width: 80px;
+        position: absolute;
+        right: -2px;
+        top: 0;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
