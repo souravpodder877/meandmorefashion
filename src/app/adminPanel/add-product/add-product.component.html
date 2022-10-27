@@ -24,7 +24,7 @@
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Category</label>
-                        <select class="form-select" aria-label="Default select example" formControlName="ProdCat">
+                        <select class="form-select" aria-label="Default select example" formControlName="ProdCatg">
                             <option selected>Select Category</option>
                             <option value="RH Normal">RH Normal</option>
                             <option value="RF Normal">RF Normal</option>
@@ -92,16 +92,24 @@
                 <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
+                        <label class="form-label">Products Price</label>
+                        <input type="number" class="form-control" formControlName="prodPrice">
+                    </div>
+                </div>
+                <!-- cont -->
+                <!-- cont -->
+                <div class="col-12 col-md-2 adminForm">
+                    <div class="mb-3">
                         <label class="form-label">Product Discounts</label>
                         <input type="number" class="form-control" formControlName="prodDis">
                     </div>
                 </div>
                 <!-- cont -->
                 <!-- cont -->
-                <div class="col-12 col-md-4 adminForm">
+                <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
-                        <label class="form-label">Products Price</label>
-                        <input type="number" class="form-control" formControlName="prodPrice">
+                        <label class="form-label">Products Offer Price</label>
+                        <input type="number"  class="form-control" readonly formControlName="prodOffPrice">
                     </div>
                 </div>
                 <!-- cont -->
@@ -141,6 +149,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Category</th>
+                        <th scope="col">Type</th>
                         <th scope="col">Size</th>
                         <th scope="col">Distributer</th>
                         <th scope="col">Color</th>
@@ -156,10 +165,11 @@
                         <td>{{i+1}}</td>
                         <td>{{item.prodId}}</td>
                         <td>{{item.prodName}}</td>
-                        <td>{{item.prodCateg}}</td>
+                        <td>{{item.ProdCatg}}</td>
+                        <td>{{item.prodType}}</td>
                         <td>{{item.prodSize}}</td>
-                        <td>{{item.prodCo}}</td>
-                        <td>{{item.prodColor}}</td>
+                        <td>{{item.prodDistributer}}</td>
+                        <td>{{item.prodColorRange}}</td>
                         <td>{{item.prodPrice}}</td>
                         <td>{{item.prodDis}}</td>
                         <td>{{item.prodPrice - (item.prodPrice*item.prodDis/100) | number: '1.0-0'}}</td>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AdminProductDataService } from '../admin-product-data.service';
 
 
 @Component({
@@ -9,12 +10,13 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor() { }
-  public rhProductArray:[] = [];
+  constructor(private _adminProductDataService:AdminProductDataService) { }
+
+  public rhProductArray:FormGroup[] = [];
   public myReactiveFormGroup= new FormGroup({
     prodID: new FormControl(''),
     prodName: new FormControl(''),
-    ProdCat: new FormControl(''),
+    ProdCatg: new FormControl(''),
     prodType: new FormControl(''),
     prodSize: new FormControl(''),
     prodDistributer: new FormControl(''),
@@ -23,9 +25,14 @@ export class AddProductComponent implements OnInit {
     prodPrice: new FormControl(''),
     prodFile: new FormControl(''),
   });
-  productPostMethod(myReactiveFormGroup){
+  public reactiveFormData = this.myReactiveFormGroup.value;
+  productPostMethod(){
     console.log(this.myReactiveFormGroup.value);
-    this.rhProductArray.push();
+    this._adminProductDataService.adminProductDataAddServer(this.reactiveFormData).subscribe(
+      (resp) => console.log('push', resp)
+    )
+    // push to table local
+    this.rhProductArray.push(this.reactiveFormData);
   }
   deleteProd(id){
     console.log('hi');
