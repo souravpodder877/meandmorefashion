@@ -22,6 +22,9 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AdminProductListComponent } from './admin-product-list/admin-product-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminRoundneckExpensiveComponent } from './adminProductsComponents/admin-roundneck-expensive/admin-roundneck-expensive.component';
+
+
 
 
 const adminRoutes = [
@@ -34,6 +37,10 @@ const adminRoutes = [
         {path:'', component:AdminProductComponent, },
         {path:'roundHalfNormal',  children:[
           {path:'', component:AdminProdRoundhalfNormalComponent,},
+          {path:'addProduct', component:AddProductComponent},
+        ]},
+        {path:'roundHalfExpensive', children:[
+          {path:'', component:AdminRoundneckExpensiveComponent},
           {path:'addProduct', component:AddProductComponent},
         ]},
         {path:'kulti', children:[
@@ -62,6 +69,8 @@ const adminRoutes = [
     AdminProductListComponent,
     AdminEmployeesComponent,
     AddProductComponent,
+    AdminRoundneckExpensiveComponent,
+    
   ],
   imports: [
     CommonModule,

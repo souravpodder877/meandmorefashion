@@ -8,7 +8,7 @@
         </div>
         
         <!-- <app-products-list [productListdata]="rhProductArray"></app-products-list> -->
-        <h3>RoundHalf Normal</h3>
+        <h3>RoundHalf Expensive</h3>
         <div class="row prod_table mt-2">
             <div class="col-12">
                 <table class="table table-dark table-striped table-bordered table-hover table-responsive fw-light text-capitalize">
@@ -29,8 +29,8 @@
                       </tr>
                     </thead>
                       <tbody>
-                        <ng-container *ngFor="let item of rhProductArray | slice:-4; let i=index">
-                          <tr *ngIf="[item.ProdCatg] =='RH' && [item.prodPrice] <= 150">
+                        <ng-container *ngFor="let item of rhProductArray; let i=index">
+                          <tr *ngIf="[item.ProdCatg] =='RH' && [item.prodPrice] >= 151">
                             <td>{{i+1}}</td>
                             <td>{{item.prodID}}</td>
                             <td>{{item.prodName}}</td>
@@ -54,5 +54,3 @@
         </div>
     </div>
 </div>
-
-

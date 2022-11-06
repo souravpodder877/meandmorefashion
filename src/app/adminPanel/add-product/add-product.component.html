@@ -2,59 +2,47 @@
     <div class="container-fluid">
         <!-- <h3>Add Products +</h3> -->
         <button mat-raised-button color="primary">Add Products + </button>
-        <form [formGroup]="myReactiveFormGroup" (ngSubmit)="productPostMethod(myReactiveFormGroup)">
+        <form [formGroup]="myReactiveData" (ngSubmit)="productPostMethod(myReactiveData.value)">
+        
             <div class="row mt-3 addFormcont">
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
-                        <label  class="form-label">Product Id</label>
+                        <label  class="form-label">Product Ids</label>
                         <input type="text" class="form-control" formControlName="prodID" >
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-4 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Name</label>
                         <input type="text" class="form-control" formControlName="prodName">
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Category</label>
-                        <select class="form-select" aria-label="Default select example" formControlName="ProdCatg">
+                        <select class="form-select" formControlName="ProdCatg">
                             <option selected>Select Category</option>
-                            <option value="RH Normal">RH Normal</option>
-                            <option value="RF Normal">RF Normal</option>
-                            <option value="RH Expensive">RH Expensive</option>
-                            <option value="RF Expensive">RF Expensive</option>
+                            <option value="RH">RH</option>
+                            <option value="RF">RF</option>
                             <option value="Kollar Half">Kollar Half</option>
-                            <option value="XXXL">Kollar Full</option>
-                            <option value="Kollar Half Normal">Kollar Half Normal</option>
-                            <option value="L-XL">Child RH Normal</option>
-                            <option value="M-L-XL">Child Full Normal</option>
-                            <option value="L-XL-XXl">Child Expnesive</option>
+                            <option value="Kollar Full">Kollar Full</option>
+                            <option value="Child RH">Child RH</option>
+                            <option value="Child Full">Child Full</option>
                         </select>
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Type</label>
-                        <select class="form-select" aria-label="Default select example" formControlName="prodType">
+                        <select class="form-select" formControlName="prodType">
                             <option selected>Select Category</option>
-                            <option value="RH Normal">Daily Deals</option>
-                            <option value="RF Normal">Trending Products</option>
-                            <option value="RH Expensive">New Arriaval</option>
-                            <option value="RF Expensive">General</option>
+                            <option value="Daily Deals">Daily Deals</option>
+                            <option value="Trending Products">Trending Products</option>
+                            <option value="New Arriaval">New Arriaval</option>
+                            <option value="General">General</option>
                         </select>
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Size</label>
@@ -72,73 +60,50 @@
                         </select>
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-4 adminForm">
-                <div class="mb-3">
-                    <label class="form-label">Distributer Name</label>
-                    <input type="text" class="form-control" formControlName="prodDistributer">
+                    <div class="mb-3">
+                        <label class="form-label">Distributer Name</label>
+                        <input type="text" class="form-control" formControlName="prodDistributer">
+                    </div>
                 </div>
-                </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Color Range</label>
                         <input type="number" class="form-control" formControlName="prodColorRange">
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Products Price</label>
                         <input type="number" class="form-control" formControlName="prodPrice">
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Product Discounts</label>
                         <input type="number" class="form-control" formControlName="prodDis">
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-2 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Products Offer Price</label>
-                        <input type="number"  class="form-control" readonly formControlName="prodOffPrice">
+                        <input type="number"  class="form-control" readonly >
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-4 adminForm">
                     <div class="mb-3">
                         <label class="form-label">Default file input example</label>
                         <input class="form-control" type="file" formControlName="prodFile" >
                     </div>
                 </div>
-                <!-- cont -->
-                <!-- cont -->
-                <!-- <div class="col-12 col-md-7 adminForm">
-                    <div class="mb-3">
-                        <label class="form-label">Products Description</label>
-                        <textarea class="form-control" placeholder="Leave a comment here"></textarea>
-                    </div>
-                </div> -->
-                <!-- cont -->
-                <!-- cont -->
                 <div class="col-12 col-md-12 adminForm">
                     <div class="mb-3">
                         <button mat-raised-button color="accent">Submit</button>
-                        <!-- <button class="ms-2" mat-raised-button color="warn" (click)="saveMethod()">Save</button> -->
+                        
                     </div>
                 </div>
-                <!-- cont -->
             </div>
-        <!-- cont -->
+        
         </form>
         <div class="row prod_table mt-2">
             <div class="col-12">
@@ -163,7 +128,7 @@
                     <tbody>
                       <tr *ngFor="let item of rhProductArray; let i=index">
                         <td>{{i+1}}</td>
-                        <td>{{item.prodId}}</td>
+                        <td>{{item.prodID}}</td>
                         <td>{{item.prodName}}</td>
                         <td>{{item.ProdCatg}}</td>
                         <td>{{item.prodType}}</td>

@@ -19,7 +19,7 @@ export class TestComponent implements OnInit {
     //   agentData,
     // };
     
-    // this.agentDatasArray.push(agentData);
+    this.agentDatasArray.push(agentData);
     this._testService.agentDataPostServiceMethods(agentData).subscribe(
       (resp) => console.log('push', resp)
     )
@@ -30,8 +30,6 @@ export class TestComponent implements OnInit {
       console.log(resData);
       const agentdatas = [];
       for(const key in resData){
-        // console.log(resData);
-        // console.log(resData[key])
         if(resData.hasOwnProperty(key)){
           agentdatas.push({
             agentIdnum:key, ...resData[key]

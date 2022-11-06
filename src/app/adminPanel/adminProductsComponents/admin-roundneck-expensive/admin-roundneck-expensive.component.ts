@@ -1,27 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { map } from 'rxjs/operators';
 import { AdminProductDataService } from '../../admin-product-data.service';
-
+import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-admin-prod-roundhalf-normal',
-  templateUrl: './admin-prod-roundhalf-normal.component.html',
-  styleUrls: ['./admin-prod-roundhalf-normal.component.scss']
+  selector: 'app-admin-roundneck-expensive',
+  templateUrl: './admin-roundneck-expensive.component.html',
+  styleUrls: ['./admin-roundneck-expensive.component.scss']
 })
-export class AdminProdRoundhalfNormalComponent implements OnInit {
+export class AdminRoundneckExpensiveComponent implements OnInit {
 
-  constructor(private _router:Router, private _httpProductService:AdminProductDataService) {}
+  constructor(private _httpProductService:AdminProductDataService) { }
   public communityLogo = '../../../assets/images/';
   // public isHidden:boolean = false;
   public newProduct = this.communityLogo + 'dailyprod1.png';
   public rhProductArray = [];
-  
 
-  // productBoxOpen(){
-  //   this.isHidden = !this.isHidden;
-  // }
-  
   fetchPrductData(){
     this._httpProductService.fetchProductDataServer()
     .pipe(map(resData =>{
@@ -41,9 +34,6 @@ export class AdminProdRoundhalfNormalComponent implements OnInit {
         console.log('get', response);
         this.rhProductArray = response
     })
-  }
-  deleteProd(id){
-    
   }
   ngOnInit(): void {
     this.fetchPrductData()

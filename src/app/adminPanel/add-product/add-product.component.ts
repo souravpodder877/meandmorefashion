@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AdminProductDataService } from '../admin-product-data.service';
+import { roundDataInterface } from '../round.model';
 
 
 @Component({
@@ -12,8 +13,8 @@ export class AddProductComponent implements OnInit {
 
   constructor(private _adminProductDataService:AdminProductDataService) { }
 
-  public rhProductArray:FormGroup[] = [];
-  public myReactiveFormGroup= new FormGroup({
+  public rhProductArray:any = [];
+  public myReactiveData= new FormGroup({
     prodID: new FormControl(''),
     prodName: new FormControl(''),
     ProdCatg: new FormControl(''),
@@ -25,14 +26,15 @@ export class AddProductComponent implements OnInit {
     prodPrice: new FormControl(''),
     prodFile: new FormControl(''),
   });
-  public reactiveFormData = this.myReactiveFormGroup.value;
-  productPostMethod(){
-    console.log(this.myReactiveFormGroup.value);
-    this._adminProductDataService.adminProductDataAddServer(this.reactiveFormData).subscribe(
-      (resp) => console.log('push', resp)
-    )
+  
+  productPostMethod(myReactiveData:roundDataInterface){
+    console.log(myReactiveData);
     // push to table local
-    this.rhProductArray.push(this.reactiveFormData);
+    this.rhProductArray.push(myReactiveData);
+    this._adminProductDataService.adminProductDataAddServer(myReactiveData).subscribe(
+      (data) => console.log(data)
+    )
+    
   }
   deleteProd(id){
     console.log('hi');

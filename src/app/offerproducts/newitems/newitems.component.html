@@ -14,56 +14,21 @@
         <div class="col-12 col-md-6">
             <div class="row">
                 <div class="col-12 col-md-6 new_items_smallImg">
-                    <img id="item1" [src]="newProduct" width="100%" alt="" (click)="newProductEvent('item1')">
+                    <img [src]="newProduct" width="100%" alt="" (click)="newProductEvent($event)">
                 </div>
                 <div class="col-12 col-md-6 new_items_smallImg">
-                    <img id="item2" [src]="newProduct2" width="100%" alt="" (click)="newProductEvent('item2')">
+                    <img [src]="newProduct2" width="100%" alt="" (click)="newProductEvent($event)">
                 </div>
                 <div class="col-12 col-md-6 new_items_smallImg" >
-                    <img id="item3" [src]="newProduct3" width="100%" alt="" (click)="newProductEvent('item3')">
+                    <img [src]="newProduct3" width="100%" alt="" (click)="newProductEvent($event)">
                 </div>
                 <div class="col-12 col-md-6 new_items_smallImg">
-                    <img id="item4" [src]="newProduct4" width="100%" alt="" (click)="newProductEvent('item4')">
+                    <img [src]="newProduct4" width="100%" alt="" (click)="newProductEvent($event)">
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <ng-container *ngIf="id ==='item1'">
-                <img [src]="newProduct" [ngClass]="{'isDisplayNone': !newProductImage}" alt="images" width="100%">
-            </ng-container>
-            <ng-container *ngIf="id ==='item2'">
-                <img [src]="newProduct2" [ngClass]="{'isDisplayNone': !newProductImage2}" alt="images" width="100%">
-            </ng-container>
-            <ng-container *ngIf="id ==='item3'">
-                <img [src]="newProduct3" [ngClass]="{'isDisplayNone': !newProductImage3}" alt="images" width="100%">
-            </ng-container>
-            <ng-container *ngIf="id ==='item4'">
-                <img [src]="newProduct4" [ngClass]="{'isDisplayNone': !newProductImage4}" alt="images" width="100%">
-            </ng-container>
-            <!-- <ng-container *ngIf="id == 'item1'; then thenTemplate; else elseTemplate"></ng-container>
-            <ng-template #thenTemplate>
-                <ng-container *ngIf="id ==='item1'">
-                    <img [src]="newProduct" [ngClass]="{'isDisplayNone': !newProductImage}" alt="images" width="100%">
-                </ng-container>
-                <ng-container *ngIf="id ==='item2'">
-                    <img [src]="newProduct2" [ngClass]="{'isDisplayNone': !newProductImage2}" alt="images" width="100%">
-                </ng-container>
-                <ng-container *ngIf="id ==='item3'">
-                    <img [src]="newProduct3" [ngClass]="{'isDisplayNone': !newProductImage3}" alt="images" width="100%">
-                </ng-container>
-                <ng-container *ngIf="id ==='item4'">
-                    <img [src]="newProduct4" [ngClass]="{'isDisplayNone': !newProductImage4}" alt="images" width="100%">
-                </ng-container>
-            </ng-template>
-            <ng-template #elseTemplate>
-                <ng-container *ngIf="id ==='item4'">
-                    <img [src]="newProduct4" [ngClass]="{'isDisplayNone': !newProductImage4}" alt="images" width="100%">
-                </ng-container>
-            </ng-template> -->
-            
-            
-            
-            
+            <img [src]="imgUrl" alt="images" width="100%">
         </div>
     </div>
 </div>

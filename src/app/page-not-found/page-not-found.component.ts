@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
   public communityLogo = '../../assets/images/';
-  public pageNotfoundImage = this.communityLogo + 'pagenotfound.png';
+  public pageNotfoundImage = this.communityLogo + '98449-coming-soon.gif';
   constructor() { }
 
   ngOnInit() {
